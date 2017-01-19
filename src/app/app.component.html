@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class='container'>
+  {{ things | json }}
+  <app-currencies *ngFor="let thing of things" [x]="thing"></app-currencies>
+
+  <button (click)="change()">Click</button>
+  
+  <app-dates></app-dates>
+  <app-time></app-time>
+  <app-datetime></app-datetime>
+</div>
